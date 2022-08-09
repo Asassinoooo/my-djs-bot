@@ -115,11 +115,4 @@ client.on('messageCreate', (messageCreate) => {
     messageCreate.reply(benmessage[Math.floor(Math.random() * benmessage.length)]) 
 }});
 
-client.on('messageCreate',(messagecreate) => {
-    const user = messagecreate.author
-    if (messagecreate.content.toLowerCase().includes('@everyone')){
-        messagecreate.channel.send(`<@${user.id}> shut`)
-    }
-});
-
 client.login(process.env.TOKEN);
